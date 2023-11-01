@@ -40,7 +40,7 @@ export interface Subscription {
     status?: string; 
     metadata?: string;
     priceId: string;
-    quantity?: string;
+    quantity?: number;
     cancelAtPeriodEnd?: boolean;
     created: string;
     currentPeriodEnd: string;
