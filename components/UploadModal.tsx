@@ -2,14 +2,14 @@ import React from 'react'
 import { FieldValues, SubmitHandler, set, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import uniqid from 'uniqid';
+import { useRouter } from 'next/navigation';
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
 
 import Modal from '@/components/Modal';
 import useUploadModal from '@/hooks/useUploadModal';
 import Input from '@/components/Input'
 import Button from '@/components/Button';
 import { useUser } from '@/hooks/useUser';
-import { useSupabaseClient } from '@supabase/auth-helpers-react';
-import { useRouter } from 'next/navigation';
 
 const UploadModal = () => {
 

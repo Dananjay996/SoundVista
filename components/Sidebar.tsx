@@ -8,12 +8,14 @@ import {MdSearch} from "react-icons/md";
 import Box from "@/components/Box";
 import SidebarItem from "@/components/SidebarItem";
 import Library from "./Library";
+import { Song } from "@/types";
 
 interface SidebarProps {
     children: React.ReactNode;
+    songs: Song[];
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+const Sidebar: React.FC<SidebarProps> = ({ children, songs}) => {
 
     const pathname = usePathname();
 
@@ -56,7 +58,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
                     </div>
                 </Box>
                 <Box className="overflow-auto h-full ">
-                    <Library />
+                    <Library songs={songs}/>
                 </Box>
 
             </div>
